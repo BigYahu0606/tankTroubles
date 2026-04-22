@@ -44,8 +44,9 @@ while rodando == True:
         x -= velocidade * dx 
         y -= velocidade * dy
 
-    tank1 = pygame.Surface((50, 30), pygame.SRCALPHA)
-    tank1.fill ((255,0,0 ))
+    tank1 = pygame.Surface((50,30), pygame.SRCALPHA)
+    tank1 = pygame.image.load('tank1 pwrup vel.png')
+    tank1 = pygame.transform.scale(tank1,(35,30))
 
     tank1_virado = pygame.transform.rotate(tank1, angulo)
     rect = tank1_virado.get_rect(center=(x,y))
@@ -71,7 +72,8 @@ while rodando == True:
         y2 -= velocidade * dy2
 
     tank2 = pygame.Surface((50, 30), pygame.SRCALPHA)
-    tank2.fill ((0,0,0 ))
+    tank2 = pygame.image.load('tank1 pwrup vel2.png')
+    tank2 = pygame.transform.scale(tank2, (35,30))
 
     tank2_virado = pygame.transform.rotate(tank2, angulo2)
     rect2 = tank2_virado.get_rect(center=(x2,y2))
